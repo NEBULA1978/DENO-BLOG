@@ -1,0 +1,107 @@
+como instalo deno en linux mint
+ChatGPT
+
+Para instalar Deno en Linux Mint, puedes seguir los siguientes pasos:
+
+    Abre una terminal en Linux Mint.
+
+    Descarga el instalador de Deno con el siguiente comando:
+
+    ruby
+
+curl -fsSL https://deno.land/x/install/install.sh | sh
+
+Espera a que la descarga y la instalación se completen.
+
+Agrega Deno al PATH de tu sistema. Puedes hacerlo agregando la siguiente línea al archivo ~/.bashrc o ~/.zshrc, dependiendo de tu shell:
+
+bash
+
+export DENO_INSTALL="/home/tu_usuario/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+Nota: Reemplaza "tu_usuario" con el nombre de tu usuario de Linux Mint.
+
+Cierra la terminal y vuelve a abrirla para que los cambios surtan efecto.
+
+Para verificar que Deno se haya instalado correctamente, puedes ejecutar el siguiente comando en la terminal:
+
+css
+
+    deno --version
+
+    Si todo está bien, deberías ver la versión de Deno instalada en tu sistema.
+
+¡Eso es todo! Ahora tienes Deno instalado en tu Linux Mint.
+User
+Archive:  /home/next/.deno
+/bin/deno.zip
+  inflating: /home/next/.deno^J/bin/deno  
+Deno was installed successfully to /home/next/.deno
+/bin/deno
+Run 'deno --help' to get started
+
+Stuck? Join our Discord https://discord.gg/deno
+next@rases:~/deno-blog$ export DENO_INSTALL="/home/next/.deno"
+next@rases:~/deno-blog$ export PATH="$DENO_INSTALL/bin:$PATH"
+next@rases:~/deno-blog$ 
+ *  Historial restaurado 
+
+next@rases:~/deno-blog$ deno --version
+Command 'deno' not found, did you mean:
+  command 'reno' from deb python3-reno (2.11.2-2build2)
+Try: sudo apt install <deb name>
+next@rases:~/deno-blog$  no me reconoce
+ChatGPT
+
+Si después de haber instalado Deno, la terminal no reconoce el comando deno, es posible que la ruta donde se encuentra Deno no se haya agregado correctamente al PATH del sistema.
+
+Para solucionarlo, puedes intentar lo siguiente:
+
+    Verificar que la ruta de instalación de Deno es correcta. Puedes hacerlo con el siguiente comando:
+
+    bash
+
+echo $DENO_INSTALL
+
+Si la ruta no es correcta, puedes definirla nuevamente con el siguiente comando:
+
+arduino
+
+export DENO_INSTALL="/home/next/.deno"
+
+Asegúrate de reemplazar /home/next/.deno con la ruta correcta donde se encuentra Deno en tu sistema.
+
+Agrega la ruta de instalación de Deno al PATH de tu sistema. Puedes hacerlo con el siguiente comando:
+
+bash
+
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+Guarda los cambios en el archivo ~/.bashrc o ~/.zshrc, dependiendo de tu shell, para que se carguen automáticamente en cada inicio de sesión. Puedes hacerlo con el siguiente comando:
+
+bash
+
+    echo 'export DENO_INSTALL="/home/next/.deno"' >> ~/.bashrc
+    echo 'export PATH="$DENO_INSTALL/bin:$PATH"' >> ~/.bashrc
+
+    Nota: Recuerda reemplazar /home/next/.deno con la ruta correcta donde se encuentra Deno en tu sistema.
+
+    Cierra la terminal y vuelve a abrirla para que los cambios surtan efecto.
+
+Si después de seguir estos pasos aún no puedes ejecutar el comando deno, es posible que debas reiniciar tu sistema para que los cambios surtan efecto.
+User
+next@rases:~/deno-blog$ echo $DENO_INSTALL
+
+next@rases:~/deno-blog$ 
+ChatGPT
+
+Si el comando echo $DENO_INSTALL no muestra ninguna salida, significa que la variable de entorno $DENO_INSTALL no está definida en tu sistema.
+
+En ese caso, puedes definirla manualmente con el siguiente comando:
+
+arduino
+
+export DENO_INSTALL="/home/next/.deno"
+
+Asegúrate de reemplazar /home/next/.deno con la ruta correcta donde se encuentra Deno en tu sistema. Después de definir la variable de entorno, puedes intentar agregar la ruta de instalación de Deno al PATH de tu sistema y verificar si puedes ejecutar el comando deno.
