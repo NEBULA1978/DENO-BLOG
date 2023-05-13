@@ -1,0 +1,37 @@
+                                 Damos acceso a todos los recursos
+next@rases:~/deno-blog$ deno run -A -r https://fresh.deno.dev .
+
+  🍋 Fresh: the next-gen web framework.  
+
+The target directory is not empty (files could get overwritten). Do you want to continue anyway? [y/N] y
+Let's set up your new Fresh project.
+
+Fresh has built in support for styling using Tailwind CSS. Do you want to use this? [y/N] y
+Do you use VS Code? [y/N] y
+The manifest has been generated for 3 routes and 1 islands.
+
+Project initialized!
+
+Enter your project directory using cd ..
+Run deno task start to start the project. CTRL-C to stop.
+
+Stuck? Join our Discord https://discord.gg/deno 
+
+Happy hacking! 🦕
+next@rases:~/deno-blog$ 
+
+//////////////////////
+//////////////////////
+
+Según los archivos que muestras, parece que estás trabajando en un proyecto web utilizando Deno como runtime. Algunos de los archivos importantes que se pueden encontrar en el proyecto son:
+
+    main.ts: Este es el archivo principal de tu aplicación, donde se define el servidor web y se configura la lógica de negocio.
+    dev.ts: Este archivo se utiliza para iniciar la aplicación en modo de desarrollo, lo que permite recargar automáticamente los cambios realizados en el código.
+    deno.json: Este archivo se utiliza para especificar las dependencias de tu proyecto. En tu caso, parece que has incluido una dependencia llamada "fresh", que se utiliza para generar HTML de manera dinámica en tiempo de ejecución.
+    import_map.json: Este archivo se utiliza para configurar los mapeos de importación de tu proyecto. En tu caso, parece que has configurado un mapeo para la dependencia "fresh".
+    components/: Este es un directorio que contiene componentes reutilizables de tu aplicación, que se pueden incluir en diferentes páginas de tu sitio web.
+    routes/: Este es un directorio que contiene archivos que definen las diferentes rutas de tu aplicación. Cada archivo puede exportar un objeto que define la ruta y la función que se ejecutará cuando se acceda a ella.
+    static/: Este es un directorio que contiene archivos estáticos, como imágenes, archivos CSS y JavaScript, que se pueden servir desde tu servidor web.
+
+Cuando ejecutas el comando deno run -A -r https://fresh.deno.dev ., estás iniciando tu aplicación con Deno y permitiendo el acceso a todas las APIs del sistema (-A). También estás indicando que se debe descargar e importar la dependencia "fresh" (-r https://fresh.deno.dev) y que el archivo principal se encuentra en el directorio actual (.).
+
