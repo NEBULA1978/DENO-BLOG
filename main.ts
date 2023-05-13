@@ -1,3 +1,3 @@
-console.log('Es es Deno')
+console.log("Es es Deno");
 
-fetch('http://midu.dev')
+fetch("http://midu.dev");
