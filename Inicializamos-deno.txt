@@ -35,3 +35,7 @@ Según los archivos que muestras, parece que estás trabajando en un proyecto we
 
 Cuando ejecutas el comando deno run -A -r https://fresh.deno.dev ., estás iniciando tu aplicación con Deno y permitiendo el acceso a todas las APIs del sistema (-A). También estás indicando que se debe descargar e importar la dependencia "fresh" (-r https://fresh.deno.dev) y que el archivo principal se encuentra en el directorio actual (.).
 
+Minuto 15
+Curso de Deno Fresh desde cero - ¡La alternativa de Next.js!
+
+
